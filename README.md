@@ -1,69 +1,99 @@
-# Risk-Controlled Selective Prediction for Diabetic Retinopathy Screening
+Update the declaration and submission-information sections of my diabetic retinopathy research project according to the **official PLOS ONE LaTeX template and submission guidelines**.
 
-This repository contains the Jupyter notebooks associated with our research, **“Risk-Controlled Selective Prediction with Retinal Foundation Models for Referable Diabetic Retinopathy Screening Under Distribution Shift.”**
+Work with the CURRENT version of `main.tex`. Do not regenerate the manuscript or overwrite previous modifications.
 
-The study investigates automatic non-referral screening using frozen retinal foundation models, probability calibration, and Learn-Then-Test (LTT) risk certification. It evaluates source-domain screening performance on APTOS 2019 and examines the reliability of source-selected policies on two external datasets, IDRiD and Messidor-2.
+### 1. Data availability
 
-The research also investigates lesion-morphology-based screening using Grade-Boundary Lesion Screening (GBLS) and Shift-Robust Grade-Boundary Lesion Screening (SR-GBLS).
+Locate the existing "Data availability" section. Remove the unrelated kidney CT dataset information and replace it with the following:
 
-## Repository Structure
+**Data availability**
 
-The repository contains seven research notebooks.
+The retinal fundus image datasets used in this study are accessible from their respective providers, subject to applicable access and usage conditions. APTOS 2019 is available through Kaggle (https://www.kaggle.com/competitions/aptos2019-blindness-detection/data), IDRiD through IEEE DataPort (https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid), and Messidor-2 through ADCIS (https://www.adcis.net/en/third-party/messidor2/). The five-grade Messidor-2 dataset used in this study was obtained from the processed RETFound benchmark resource (https://github.com/rmaphoh/RETFound/blob/main/BENCHMARK.md); the official Messidor-2 release does not contain DR severity annotations.
 
-| Notebook | Research component |
-|---|---|
-| `01_Thesis_DR_APTOS_RETOUND.ipynb` | RETFound-Green experiments on APTOS |
-| `02_DR_APTOS_MedSigLIP.ipynb` | MedSigLIP-based experiments |
-| `03_Thesis_External_Validation.ipynb` | External evaluation on IDRiD and Messidor-2 |
-| `04_DR_APTOS_DINOv2_Large.ipynb` | DINOv2-Large experiments |
-| `05_DR_GBLS_SR_GBLS.ipynb` | GBLS and SR-GBLS investigation |
-| `06_External_Failure_Analysis.ipynb` | External screening failure analysis |
-| `07_Thesis_Result_&_Analysis.ipynb` | Experimental results and comparative analysis |
+The research implementation notebooks are publicly available at https://github.com/Safayet19/Diabetic-Retinopathy. Original dataset images are not redistributed in this repository.
 
-## Datasets
+Verify that the links are valid and that the repository description accurately reflects its contents. Do not invent dataset accessions, DOIs, supplementary data, or reproducibility claims.
 
-The research uses three publicly available retinal fundus image datasets.
+### 2. Author contributions
 
-- **APTOS 2019:** Source-domain model development, calibration, and internal evaluation.
-- **IDRiD:** Independent external evaluation.
-- **Messidor-2:** Independent external evaluation.
+Retain the existing CRediT author contribution assignments exactly as provided below. The only name correction is replacing "Md. Mijanur Rahman" with "Abdul Kadar Muhammad Masum".
 
-Referable diabetic retinopathy is defined using severity grades 2–4, while grades 0–1 are treated as non-referable.
+**Author contributions**
 
-## Methodology
+Conceptualization: Abdul Kadar Muhammad Masum.
 
-The study includes the following research components:
+Data curation: Safayet Ullah, Md. Jubayer Islam, Tanvirul Hoque Faysal.
 
-1. Feature extraction using frozen RETFound-Green, DINOv2-Large, and MedSigLIP encoders.
-2. Binary referable-DR classification and temperature scaling.
-3. Risk-controlled automatic non-referral using Learn-Then-Test certification.
-4. External evaluation of source-selected screening policies.
-5. Lesion-morphology-based screening using GBLS and SR-GBLS.
-6. Risk–coverage comparisons and grade-specific failure analysis.
+Formal analysis: Abdul Kadar Muhammad Masum, Safayet Ullah.
 
-## Key Findings
+Investigation: Safayet Ullah, Md. Jubayer Islam.
 
-At a predefined 5% conditional-risk target, the RETFound-Green screening policies achieved **51.06% mean automatic-clearance coverage** and **0.37% mean observed risk** on held-out APTOS test images.
+Methodology: Safayet Ullah, Md. Jubayer Islam.
 
-When transferred unchanged to external datasets, mean observed risk increased to **14.73% on IDRiD** and **14.66% on Messidor-2**.
+Resources: Abdul Kadar Muhammad Masum.
 
-These findings highlight the importance of evaluating automatic non-referral risk under distribution shift rather than relying only on conventional classification performance.
+Software: Safayet Ullah.
 
-## Reproducibility
+Supervision: Abdul Kadar Muhammad Masum.
 
-The experiments were developed in Python using PyTorch and supporting machine-learning libraries.
+Validation: Safayet Ullah, Md. Jubayer Islam, Tanvirul Hoque Faysal.
 
-The notebooks document different components of the research workflow. Reproducing the experiments requires access to the relevant datasets, pretrained model checkpoints, and compatible execution environments.
+Visualization: Safayet Ullah, Md. Jubayer Islam.
 
-Dataset locations and file paths may need to be configured for the environment in which the notebooks are executed.
+Writing – original draft: Safayet Ullah, Md. Jubayer Islam, Tanvirul Hoque Faysal.
 
-## Research Authors
+Writing – review & editing: Abdul Kadar Muhammad Masum, Safayet Ullah.
 
-- Safayet Ullah
-- Md. Jubayer Islam
-- Tanvirul Hoque Faysal
+Preserve all 12 contribution categories and their assigned authors. Do not invent additional roles or change existing responsibilities.
 
-**Department of Computer Science and Engineering**  
-Southeast University, Bangladesh
+According to PLOS ONE, these contributions must be entered in the submission system. Keep them in a separate `SUBMISSION_METADATA.md` file for submission entry rather than adding unnecessary sections to the manuscript PDF.
 
-**Research Supervisor:** Prof. Dr. Abdul Kadar Muhammad Masum
+### 3. Competing interests
+
+Prepare the following declaration for the PLOS ONE submission system:
+
+"The authors declare that they have no competing interests."
+
+This declaration must be confirmed by all four authors before submission.
+
+According to the official PLOS ONE guidelines, competing interests must be declared through the submission system and should not be included in the manuscript PDF.
+
+Therefore:
+- Remove any "Competing interests" section from `main.tex`.
+- Preserve the declaration in `SUBMISSION_METADATA.md`.
+- Do not invent financial, institutional, personal, or commercial relationships.
+
+### 4. Acknowledgments
+
+Keep the Acknowledgments section immediately before References, as required by PLOS ONE.
+
+Retain any genuine existing acknowledgments. Do not invent acknowledgments or individuals.
+
+Check the official Messidor-2 dataset attribution requirements against its provider documentation and identify any mandatory acknowledgments or citations that are missing. Do not fabricate acknowledgment text.
+
+Do not place funding declarations in Acknowledgments; PLOS ONE collects funding information separately through the submission system.
+
+### 5. Formatting and placement
+
+- Follow the official PLOS ONE LaTeX template.
+- Retain the Data availability section and its verified content in the manuscript, without creating duplicate sections.
+- Keep Acknowledgments immediately before References.
+- Keep Author contributions and Competing interests in the separate submission metadata file rather than inserting them into the manuscript PDF.
+- Preserve the current font, margins, line spacing, section styling, and continuous line numbering.
+- Keep URLs clickable and allow proper line wrapping.
+- Do not modify any research results, equations, tables, figures, citations, bibliography entries, or scientific statements.
+- Do not rewrite the entire `main.tex`.
+
+### 6. Final verification
+
+After making these targeted changes:
+
+1. Compile `main.tex` successfully.
+2. Verify that the kidney CT information is completely removed.
+3. Confirm all three DR datasets and the GitHub repository are correctly described.
+4. Confirm that all 12 CRediT roles are preserved and the supervisor's name is corrected everywhere in the contribution statement.
+5. Confirm the competing-interest declaration is available in `SUBMISSION_METADATA.md`, not the manuscript PDF.
+6. Verify Acknowledgments and References are in the correct order.
+7. Check that no content, citations, equations, tables, figures, or formatting outside the requested sections was changed.
+
+Report any unverified information explicitly instead of guessing. Apply only the requested modifications.
