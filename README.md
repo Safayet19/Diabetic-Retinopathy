@@ -71,15 +71,17 @@ The experimental framework includes:
 6. **Comparative analysis:** Classification performance, probability calibration, risk–coverage behavior, and alternative threshold-selection methods.
 7. **Failure analysis:** Grade-specific false clearances and retrospective matched-coverage comparisons.
 
+
 The primary screening endpoint is conditional automatic non-referral risk:
 
-\[
-R(t)=P(Y=1\mid A_t(X)=1)
-\]
+$$
+R(t) = P\left(Y = 1 \mid A_t(X) = 1\right)
+$$
 
-where \(Y=1\) denotes referable DR and \(A_t(X)=1\) denotes automatic clearance at threshold \(t\).
+where $Y = 1$ denotes referable DR and $A_t(X) = 1$ denotes automatic clearance at threshold $t$.
 
 The corresponding coverage measures the proportion of images selected for automatic clearance.
+
 
 ## Key Findings
 
